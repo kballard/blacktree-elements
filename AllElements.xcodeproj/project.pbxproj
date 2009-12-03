@@ -190,7 +190,7 @@
 /* Begin PBXFileReference section */
 		4DB4A08A0E100BFD0010C540 /* ColloquyPlugin.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ColloquyPlugin.xcodeproj; path = ColloquyPlugin/trunk/ColloquyPlugin.xcodeproj; sourceTree = "<group>"; };
 		4DB4A0930E100C0A0010C540 /* QSAddressBookPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSAddressBookPlugIn.xcodeproj; path = com.apple.AddressBook/trunk/QSAddressBookPlugIn.xcodeproj; sourceTree = "<group>"; };
-		4DB4A09C0E100C130010C540 /* CalculatorPlugin.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CalculatorPlugin.xcodeproj; path = com.apple.calculator/trunk/CalculatorPlugin.xcodeproj; sourceTree = "<group>"; };
+		4DB4A09C0E100C130010C540 /* CalculatorPlugin.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CalculatorPlugin.xcodeproj; path = com.apple.calculator/CalculatorPlugin.xcodeproj; sourceTree = "<group>"; };
 		4DB4A0A50E100C1A0010C540 /* QSGmailPlugIn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QSGmailPlugIn.xcodeproj; path = com.google.mail/QSGmailPlugIn.xcodeproj; sourceTree = "<group>"; };
 		4DB4A0AE0E100C2B0010C540 /* DiffModule.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DiffModule.xcodeproj; path = DiffModule/trunk/DiffModule.xcodeproj; sourceTree = "<group>"; };
 		4DB4A0B70E100CDB0010C540 /* TextManipulationElement.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TextManipulationElement.xcodeproj; path = elements.textmanipulation/TextManipulationElement.xcodeproj; sourceTree = "<group>"; };
