@@ -203,6 +203,8 @@
 		4DB8398D0D13F41200A0CA18 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
 				BUNDLE_LOADER = /Applications/Quicksilver.app/Contents/MacOS/Quicksilver;
 				FRAMEWORK_SEARCH_PATHS = "$(QSFramework)";
 				INFOPLIST_FILE = Info.plist;
@@ -221,6 +223,7 @@
 		BB8B95710C24E834004C6479 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				BUNDLE_LOADER = /Applications/Quicksilver.app/Contents/MacOS/Quicksilver;
 				FRAMEWORK_SEARCH_PATHS = "$(QSFramework)";
 				INFOPLIST_FILE = Info.plist;
