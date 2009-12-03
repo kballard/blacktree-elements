@@ -3,8 +3,9 @@
 //  Quicksilver
 //
 
-#import <QSCore/QSLibrarian.h>
 #import <QSCore/QSNotifyMediator.h>
+#import <QSInterface/QSInterfaceController.h>
+#import <QSInterface/QSLargeTypeDisplay.h>
 #import "CalculatorAction.h"
 #import "CalculatorPrefPane.h"
 
@@ -64,7 +65,7 @@
 	int status = [task terminationStatus];
 	if (status == 0) {
 		NSData *data = [output availableData];
-		outString = [NSString stringWithCString:[data bytes] length:[data length]];
+		outString = [[[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding] autorelease];
 	} else {
 		outString = @"Error";
 	}
@@ -105,9 +106,7 @@
 			break;
 		case CalculatorDisplayLargeType: {
 			// Display result as large type
-			QSAction *largeTypeAction = [[QSLibrarian sharedInstance] actionForIdentifier:@"QSLargeTypeAction"];
-			[largeTypeAction performOnDirectObject:result indirectObject:nil];
-			[[QSReg preferredCommandInterface] selectObject:result];
+			QSShowLargeType(outString);
 			result = nil;
 			break;
 		} case CalculatorDisplayNotification: {

@@ -29,4 +29,9 @@ NSString *CalculatorEnginePref = @"CalculatorEngine";
 	return @"quicksilver/plug-ins/calculator_plug-in";
 }
 
+- (void)paneWillMoveToWindow:(NSWindow *)newWindow {
+	NSLog(@"paneWillMoveToWindow: %@", newWindow);
+	[super paneWillMoveToWindow:newWindow];
+}
+
 @end

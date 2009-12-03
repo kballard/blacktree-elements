@@ -22,14 +22,9 @@
 		0A83260506B74EBA00F4F4EE /* CalculatorPrefPane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorPrefPane.m; sourceTree = "<group>"; };
 		0AB0246406D0356D0073A3CD /* Info.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Info.rtf; sourceTree = "<group>"; };
 		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		4DB839950D13F43D00A0CA18 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
-		4DB839960D13F43D00A0CA18 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
-		4DB8399C0D13F43D00A0CA18 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
-		4DB8399E0D13F43D00A0CA18 /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPlugIn_Prefix.pch; sourceTree = "<group>"; };
-		4DB839A00D13F43D00A0CA18 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		4DB839FC0D13FAA700A0CA18 /* element.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = element.xml; sourceTree = "<group>"; };
 		8D5B49B6048680CD000E48DA /* Calculator Module.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Calculator Module.qsplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92D2EAB90D0D5CF8003EB1BD /* CalculatorPrefPane.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = CalculatorPrefPane.nib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,7 +43,6 @@
 		089C166AFE841209C02AAC07 /* TSColloquyPlugin */ = {
 			isa = PBXGroup;
 			children = (
-				4DB839940D13F43D00A0CA18 /* Configuration */,
 				08FB77AFFE84173DC02AAC07 /* Classes */,
 				32C88E010371C26100C91783 /* Other Sources */,
 				089C167CFE841241C02AAC07 /* Resources */,
@@ -118,19 +112,6 @@
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
-		};
-		4DB839940D13F43D00A0CA18 /* Configuration */ = {
-			isa = PBXGroup;
-			children = (
-				4DB839950D13F43D00A0CA18 /* Common.xcconfig */,
-				4DB839960D13F43D00A0CA18 /* Debug.xcconfig */,
-				4DB8399C0D13F43D00A0CA18 /* QSPlugIn.xcconfig */,
-				4DB8399E0D13F43D00A0CA18 /* QSPlugIn_Prefix.pch */,
-				4DB839A00D13F43D00A0CA18 /* Release.xcconfig */,
-			);
-			name = Configuration;
-			path = ../../Configuration;
-			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -215,32 +196,48 @@
 /* Begin XCBuildConfiguration section */
 		4DB8398C0D13F41200A0CA18 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DB839A00D13F43D00A0CA18 /* Release.xcconfig */;
 			buildSettings = {
 			};
 			name = Release;
 		};
 		4DB8398D0D13F41200A0CA18 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DB8399C0D13F43D00A0CA18 /* QSPlugIn.xcconfig */;
 			buildSettings = {
+				BUNDLE_LOADER = /Applications/Quicksilver.app/Contents/MacOS/Quicksilver;
+				FRAMEWORK_SEARCH_PATHS = "$(QSFramework)";
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_PREPROCESS = NO;
+				OTHER_LDFLAGS = (
+					"-framework",
+					QSCore,
+					"-framework",
+					QSInterface,
+				);
 				PRODUCT_NAME = "Calculator Module";
+				WRAPPER_EXTENSION = qsplugin;
 			};
 			name = Release;
 		};
 		BB8B95710C24E834004C6479 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DB8399C0D13F43D00A0CA18 /* QSPlugIn.xcconfig */;
 			buildSettings = {
+				BUNDLE_LOADER = /Applications/Quicksilver.app/Contents/MacOS/Quicksilver;
+				FRAMEWORK_SEARCH_PATHS = "$(QSFramework)";
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_PREPROCESS = NO;
+				OTHER_LDFLAGS = (
+					"-framework",
+					QSCore,
+					"-framework",
+					QSInterface,
+				);
 				PRODUCT_NAME = "Calculator Module";
+				WRAPPER_EXTENSION = qsplugin;
 			};
 			name = Debug;
 		};
 		BB8B95750C24E834004C6479 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DB839960D13F43D00A0CA18 /* Debug.xcconfig */;
 			buildSettings = {
 			};
 			name = Debug;
