@@ -73,13 +73,12 @@
 		NSRange divRange = [outString rangeOfString:CalculatorDivider];
 		if (divRange.location != NSNotFound) {
 			NSString *stack = [outString substringFromIndex:(divRange.location + divRange.length)];
-			stack = [[stack stringByTrimmingCharactersInSet:
-				[NSCharacterSet whitespaceAndNewlineCharacterSet]] retain];
+			stack = [stack stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 			// Limit stack to 40 elements
 			NSArray *stackArray = [stack componentsSeparatedByString:@"\n"];
 			if ([stackArray count] > 40) {
 				stackArray = [stackArray subarrayWithRange:NSMakeRange(0,40)];
-				stack = [[stackArray componentsJoinedByString:@"\n"] retain];
+				stack = [stackArray componentsJoinedByString:@"\n"];
 			}
 			[dcStack release];
 			dcStack = [stack retain];
